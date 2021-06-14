@@ -1,0 +1,20 @@
+.button {
+  padding: 1.5rem 2.9rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &-orange {
+    color: #ffffff;
+    background: #d87d4a;
+    &:hover {
+      background: #fbaf85;
+    }
+  }
+}
