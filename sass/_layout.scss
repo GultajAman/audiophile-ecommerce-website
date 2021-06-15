@@ -1,4 +1,21 @@
 .container {
-  max-width: 120rem;
-  margin: 0 16.5rem;
+  max-width: 110rem;
+  margin: 0 auto;
+}
+.header {
+  background-color: #0e0e0e;
+  height: 100vh;
+  border: 1px solid #0e0e0e;
+}
+.categories {
+  margin-top: 12rem;
+  display: grid;
+  grid-gap: 10rem 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.products {
+  margin-top: 10rem;
+}
+.product {
+  margin-top: 4.8rem;
 }
