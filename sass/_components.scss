@@ -48,7 +48,9 @@
 }
 
 .showcase {
+  overflow: hidden;
   display: flex;
+
   // justify-content: space-between;
   &__text-box {
     flex: 1;
@@ -91,10 +93,21 @@
   }
 
   &__img-box {
+    // overflow: hidden;
     // flex: 1;
     img {
-      width: 708.8px;
-      height: 100%;
+      width: 47.8rem;
+      height: 51.4rem;
     }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 3rem;
+  &__product {
+    // background: #f1f1f1;
+    border-radius: 8px;
   }
 }
