@@ -411,7 +411,7 @@
 
   &__social-links {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 
     margin-top: 10.5rem;
   }
@@ -421,9 +421,10 @@
     cursor: pointer;
   }
 
-  &__social-href {
-    &:hover {
-      fill: #d87d4a;
-    }
+  &__social-href svg {
+    fill: #fff;
+   &:hover {
+    fill: #d87d4a;
+   }
   }
 }
