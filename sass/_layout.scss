@@ -1,21 +1,560 @@
 .container {
   max-width: 110rem;
   margin: 0 auto;
+  padding: 0 4rem;
 }
 .header {
   background-color: #0e0e0e;
-  height: 100vh;
-  border: 1px solid #0e0e0e;
+  height: 72rem;
+  &--headphone {
+    height: 33.6rem;
+  }
+  &__description {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 44px;
+    margin-top: 10rem;
+    text-align: center;
+    letter-spacing: 1.42857px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 3.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    &__links {
+      list-style: none;
+      display: flex;
+
+      margin-left: -10rem;
+    }
+
+    &__link {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+
+      &:not(:last-child) {
+        margin-right: 3.4rem;
+      }
+    }
+
+    &__href {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 25px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-decoration: none;
+
+      &:hover {
+        color: #d87d4a;
+      }
+    }
+  }
+
+  .new-product {
+    display: flex;
+    &__img {
+      margin-top: 7rem;
+    }
+
+    &__layouts {
+      margin-top: 13rem;
+      h2 {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.5);
+      }
+      h3 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 56px;
+        line-height: 58px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-top: 2.4rem;
+        margin-bottom: 2.4rem;
+      }
+      p {
+        font-style: normal;
+        font-weight: 200;
+        font-size: 15px;
+        line-height: 25px;
+        color: rgba(255, 255, 255, 0.5);
+
+        width: 35rem;
+        height: 7.5rem;
+        margin-bottom: 4rem;
+      }
+    }
+    &__btn {
+      background: #d87d4a;
+
+      &:hover {
+        background: #fbaf85;
+      }
+    }
+  }
 }
-.categories {
-  margin-top: 12rem;
+
+.main {
   display: grid;
-  grid-gap: 10rem 3rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 12rem;
+  margin-bottom: 17rem;
+  grid-template-columns: repeat((auto-fill, minmax(310px, 1fr)));
+  grid-gap: 7rem 3rem;
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 3rem 10rem;
+    &__img {
+      width: 12rem;
+      height: 16rem;
+      object-fit: cover;
+      margin-top: -6rem;
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      letter-spacing: 1.28571px;
+      text-transform: uppercase;
+
+      color: #000000;
+    }
+
+    &__shop {
+      margin-top: 1.5rem;
+      .shop-href {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: rgba(0, 0, 0, 0.5);
+
+        margin-right: 1.3rem;
+
+        text-decoration: none;
+
+        &:hover {
+          color: #d87d4a;
+        }
+      }
+    }
+  }
+}
+
+.speaker9 {
+  overflow: hidden;
+  height: 560px;
+  background: #d87d4a;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 776px) {
+    flex-direction: column;
+    align-items: center;
+    height: 720px;
+    text-align: center;
+  }
+
+  &__img {
+    width: 40rem;
+    height: 48rem;
+    margin-left: 5rem;
+    margin-top: 10rem;
+    @media (max-width: 776px) {
+      width: 20rem;
+      height: 23rem;
+      margin-top: 6rem;
+      margin-left: 0;
+    }
+    // margin-right: 14rem;
+  }
+
+  &__layouts {
+    margin-top: 13rem;
+    @media (max-width: 776px) {
+      margin-top: 6rem;
+    }
+    h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 58px;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: #ffffff;
+
+      width: 26rem;
+      height: 11.5rem;
+      @media (max-width: 776px) {
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 15px;
+      line-height: 25px;
+      color: #ffffff;
+      opacity: 0.75;
+
+      width: 35rem;
+      height: 5rem;
+
+      margin-top: 1.4rem;
+      margin-bottom: 6.5rem;
+    }
+
+    button {
+      background: #000000;
+
+      &:hover {
+        background: #4c4c4c;
+      }
+    }
+  }
+}
+
+.speaker7 {
+  margin-top: 5rem;
+  height: 600px;
+  @media (max-width: 776px) {
+    width: 100%;
+    height: 500px;
+  }
+
+  &__img {
+    border-radius: 8px;
+    max-width: 100%;
+    width: 320rem;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  &__layouts {
+    margin-top: -28rem;
+    margin-left: 7rem;
+
+    h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 38px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 3.2rem;
+    }
+
+    button {
+      background-color: transparent;
+      color: #000000;
+      border: 1px solid #000000;
+
+      &:hover {
+        background: #000000;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.earphonesx1 {
+  margin-top: 15rem;
+  display: flex;
+  grid-gap: 3rem;
+
+  @media (max-width: 976px) {
+    flex-direction: column;
+  }
+  &__img {
+    width: 540px;
+    height: 320px;
+    border-radius: 8px;
+    margin-right: 3rem;
+    @media (max-width: 776px) {
+      width: 300px;
+    }
+    @media (max-width: 776px) {
+      width: 480px;
+    }
+  }
+
+  &__card {
+    background: #f1f1f1;
+    border-radius: 8px;
+    width: 540px;
+    height: 320px;
+    padding: 101px 170px 101px 95px;
+    @media (max-width: 776px) {
+      width: 480px;
+    }
+
+    h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 38px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      margin-bottom: 3.2rem;
+
+      color: #000000;
+    }
+    button {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 18px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      color: #000000;
+      background-color: transparent;
+      border: 1px solid #000000;
+
+      &:hover {
+        background: #000000;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.best-audio {
+  display: flex;
+  margin-top: 20rem;
+  @media (max-width: 776px) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  &__layouts {
+    flex: 1;
+    margin-top: 15rem;
+    margin-right: 12rem;
+    @media (max-width: 776px) {
+      margin-right: 0;
+    }
+    h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 1.42857px;
+      text-transform: uppercase;
+      color: #000000;
+      margin-bottom: 3.2rem;
+    }
+    span {
+      color: #d87d4a;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 15px;
+      line-height: 25px;
+      color: #000;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
+
+  &__img {
+    flex: 1.2;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+}
+
+.footer {
+  margin-top: 20rem;
+  background: #101010;
+  height: 36.5rem;
+
+  &__all {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 7.5rem;
+  }
+
+  &__layouts {
+    h2 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      color: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    p {
+      width: 540px;
+      height: 75px;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 15px;
+      line-height: 25px;
+      color: #ffffff;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+
+      margin-bottom: 8.1rem;
+      margin-top: 3.6rem;
+    }
+  }
+
+  &__right {
+    margin-left: 14rem;
+  }
+
+  &__links {
+    list-style: none;
+    display: flex;
+  }
+
+  &__link {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    &:not(:first-child) {
+      margin-left: 3.4rem;
+    }
+  }
+
+  &__href {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+
+    &:hover {
+      color: #d87d4a;
+    }
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 10.5rem;
+  }
+  &__social-link {
+    list-style: none;
+    margin-right: 1.6rem;
+    cursor: pointer;
+  }
+
+  &__social-href svg {
+    fill: #fff;
+    &:hover {
+      fill: #d87d4a;
+    }
+  }
 }
 .products {
-  margin-top: 10rem;
+  margin-top: 16rem;
 }
-.product {
-  margin-top: 4.8rem;
+.product__headphone {
+  display: flex;
+  gap: 5.2rem 12rem;
+  align-items: center;
+  margin-bottom: 16rem;
+  flex-direction: row;
+  @media (max-width: 776px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  &--reverse {
+    flex-direction: row-reverse;
+    @media (max-width: 776px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__img {
+    flex: 1.5;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      // width: 540px;
+      // height: 560px;
+    }
+  }
+  &__text {
+    flex: 1.2;
+    h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 4rem;
+      line-height: 4.4rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 1.6rem 0 3.2rem 0;
+    }
+    h5 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 1.9rejm;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+      color: var(--secondary-color);
+    }
+    p {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      color: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+  }
 }
