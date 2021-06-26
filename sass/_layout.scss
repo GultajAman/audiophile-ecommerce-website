@@ -1,11 +1,27 @@
 .container {
   max-width: 110rem;
   margin: 0 auto;
+  padding: 0 4rem;
 }
 
 .header {
   background-color: #0e0e0e;
   height: 72rem;
+  &--headphone {
+    height: 33.6rem;
+  }
+  &__description {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 44px;
+    margin-top: 10rem;
+    text-align: center;
+    letter-spacing: 1.42857px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
 
   .navbar {
     display: flex;
@@ -29,7 +45,9 @@
       text-transform: uppercase;
       color: #ffffff;
 
-      margin-right: 3.4rem;
+      &:not(:last-child) {
+        margin-right: 3.4rem;
+      }
     }
 
     &__href {
@@ -99,20 +117,19 @@
 }
 
 .main {
-  display: flex;
+  display: grid;
   margin-top: 12rem;
   margin-bottom: 17rem;
+  grid-template-columns: repeat((auto-fill, minmax(310px, 1fr)));
+  grid-gap: 7rem 3rem;
+
   .product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: #f1f1f1;
     border-radius: 8px;
-    margin-right: 3rem;
-
-    width: 35rem;
-    height: 20rem;
-
+    padding: 3rem 10rem;
     &__img {
       width: 12rem;
       height: 16rem;
@@ -163,16 +180,32 @@
   display: flex;
   justify-content: space-around;
 
+  @media (max-width: 776px) {
+    flex-direction: column;
+    align-items: center;
+    height: 720px;
+    text-align: center;
+  }
+
   &__img {
     width: 40rem;
     height: 48rem;
     margin-left: 5rem;
     margin-top: 10rem;
+    @media (max-width: 776px) {
+      width: 20rem;
+      height: 23rem;
+      margin-top: 6rem;
+      margin-left: 0;
+    }
     // margin-right: 14rem;
   }
 
   &__layouts {
     margin-top: 13rem;
+    @media (max-width: 776px) {
+      margin-top: 6rem;
+    }
     h2 {
       font-style: normal;
       font-weight: bold;
@@ -186,6 +219,9 @@
 
       width: 26rem;
       height: 11.5rem;
+      @media (max-width: 776px) {
+        margin: 0 auto;
+      }
     }
 
     p {
@@ -215,15 +251,23 @@
 
 .speaker7 {
   margin-top: 5rem;
+  height: 600px;
+  @media (max-width: 776px) {
+    width: 100%;
+    height: 500px;
+  }
+
   &__img {
     border-radius: 8px;
     max-width: 100%;
     width: 320rem;
+    height: 400px;
+    object-fit: cover;
   }
 
   &__layouts {
-    margin-top: -22rem;
-    margin-left: 9.5rem;
+    margin-top: -28rem;
+    margin-left: 7rem;
 
     h2 {
       font-style: normal;
@@ -233,7 +277,6 @@
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #000000;
-
       margin-bottom: 3.2rem;
     }
 
@@ -253,12 +296,22 @@
 .earphonesx1 {
   margin-top: 15rem;
   display: flex;
+  grid-gap: 3rem;
 
+  @media (max-width: 976px) {
+    flex-direction: column;
+  }
   &__img {
     width: 540px;
     height: 320px;
     border-radius: 8px;
     margin-right: 3rem;
+    @media (max-width: 776px) {
+      width: 300px;
+    }
+    @media (max-width: 776px) {
+      width: 480px;
+    }
   }
 
   &__card {
@@ -266,8 +319,10 @@
     border-radius: 8px;
     width: 540px;
     height: 320px;
-
     padding: 101px 170px 101px 95px;
+    @media (max-width: 776px) {
+      width: 480px;
+    }
 
     h2 {
       font-style: normal;
@@ -304,10 +359,17 @@
 .best-audio {
   display: flex;
   margin-top: 20rem;
-
+  @media (max-width: 776px) {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
   &__layouts {
+    flex: 1;
     margin-top: 15rem;
     margin-right: 12rem;
+    @media (max-width: 776px) {
+      margin-right: 0;
+    }
     h2 {
       font-style: normal;
       font-weight: bold;
@@ -317,23 +379,30 @@
       text-transform: uppercase;
       color: #000000;
       margin-bottom: 3.2rem;
+    }
+    span {
+      color: #d87d4a;
+    }
 
-      span {
-        color: #d87d4a;
-      }
-
-      P {
-        font-style: normal;
-        font-weight: 200;
-        font-size: 15px;
-        line-height: 25px;
-        color: rgba(0, 0, 0, 0.5);
-      }
+    p {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 15px;
+      line-height: 25px;
+      color: #000;
+      mix-blend-mode: normal;
+      opacity: 0.5;
     }
   }
 
   &__img {
-    border-radius: 8px;
+    flex: 1.2;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
   }
 }
 
@@ -390,8 +459,9 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #ffffff;
-
-    margin-right: 3.4rem;
+    &:not(:first-child) {
+      margin-left: 3.4rem;
+    }
   }
 
   &__href {
@@ -423,8 +493,69 @@
 
   &__social-href svg {
     fill: #fff;
-   &:hover {
-    fill: #d87d4a;
-   }
+    &:hover {
+      fill: #d87d4a;
+    }
+  }
+}
+.products {
+  margin-top: 16rem;
+}
+.product__headphone {
+  display: flex;
+  gap: 5.2rem 12rem;
+  align-items: center;
+  margin-bottom: 16rem;
+  flex-direction: row;
+  @media (max-width: 776px) {
+    flex-direction: column;
+    text-align: center;
+  }
+  &--reverse {
+    flex-direction: row-reverse;
+    @media (max-width: 776px) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__img {
+    flex: 1.5;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+      // width: 540px;
+      // height: 560px;
+    }
+  }
+  &__text {
+    flex: 1.2;
+    h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 4rem;
+      line-height: 4.4rem;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 1.6rem 0 3.2rem 0;
+    }
+    h5 {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 1.9rejm;
+      letter-spacing: 1rem;
+      text-transform: uppercase;
+      color: var(--secondary-color);
+    }
+    p {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 1.5rem;
+      line-height: 2.5rem;
+      color: #000000;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
   }
 }
